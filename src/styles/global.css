@@ -1,0 +1,6 @@
+@import "tailwindcss";
+@import "./generated/colors.css";
+
+[x-cloak] {
+  display: none !important;
+}

@@ -1,0 +1,197 @@
+import { Meta, Unstyled } from "@storybook/addon-docs/blocks";
+
+import colors from "../../tokens/generated/colors.json";
+
+<Meta title="Foundations/Colors" />
+
+# Colors
+
+Primitive colors are exported from Figma Variables and transformed by Style Dictionary.
+
+Click a HEX value or CSS class to copy it.
+
+{
+(() => {
+const groups = new Map();
+const standalone = [];
+const copyTimers = new WeakMap();
+
+    Object.entries(colors).forEach(([tokenName, value]) => {
+      const match = tokenName.match(/^color-(.+)-(\d+)$/);
+
+      if (!match) {
+        standalone.push({
+          tokenName,
+          value,
+        });
+
+        return;
+      }
+
+      const [, family, scale] = match;
+      const tokens = groups.get(family) ?? [];
+
+      tokens.push({
+        tokenName,
+        value,
+        scale: Number(scale),
+      });
+
+      groups.set(family, tokens);
+    });
+
+    const formatFamilyName = (family) =>
+      family
+        .split("-")
+        .map((part) => part.charAt(0).toUpperCase() + part.slice(1))
+        .join(" ");
+
+    const copy = async (event, value) => {
+      const button = event.currentTarget;
+
+      try {
+        await navigator.clipboard.writeText(value);
+
+        const previousTimer = copyTimers.get(button);
+
+        if (previousTimer) {
+          window.clearTimeout(previousTimer);
+        }
+
+        button.dataset.copied = "true";
+
+        const timer = window.setTimeout(() => {
+          button.dataset.copied = "false";
+          copyTimers.delete(button);
+        }, 1200);
+
+        copyTimers.set(button, timer);
+      } catch (error) {
+        console.error("Copy failed:", error);
+      }
+    };
+
+    const CopyIcon = () => (
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" className="size-4 transition group-hover:text-black group-data-[copied=true]:hidden" aria-hidden="true">
+        <rect width="13" height="13" x="9" y="9" rx="2" />
+        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1" />
+      </svg>
+    );
+
+    const CheckIcon = () => (
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="hidden size-4 text-black group-data-[copied=true]:block" aria-hidden="true">
+        <path d="m5 12 4 4L19 6" />
+      </svg>
+    );
+
+    const CopyRow = ({ label, value }) => (
+      <button type="button" data-copied="false" className="group flex w-full cursor-pointer items-center justify-between gap-4 py-3 text-left" aria-label={`Copy ${value}`} onClick={(event) => copy(event, value)}>
+        <div className="min-w-0">
+          <div className="mb-1 text-[11px] font-medium uppercase tracking-wider text-gray-400">
+            {label}
+          </div>
+
+          <code className="block truncate font-mono text-sm text-gray-700 transition group-hover:text-black">
+            {value}
+          </code>
+        </div>
+
+        <div className="flex shrink-0 items-center gap-2 text-gray-400">
+          <span className="hidden text-xs text-gray-500 group-data-[copied=true]:block">
+            Copied
+          </span>
+
+          <CopyIcon />
+          <CheckIcon />
+        </div>
+      </button>
+    );
+
+    const ColorCard = ({ tokenName, value }) => {
+      const name = tokenName.replace(/^color-/, "");
+      const cssVariable = `--${tokenName}`;
+      const className = `bg-${name}`;
+
+      return (
+        <article className="min-w-0 overflow-hidden rounded-xl border border-gray-200 bg-white">
+          <div className="h-32" style={{ backgroundColor: `var(${cssVariable})` }} />
+
+          <div className="p-4">
+            <div className="font-mono text-sm font-semibold tracking-tight text-black">
+              {cssVariable}
+            </div>
+
+            <div className="mt-4 divide-y divide-gray-100">
+              <CopyRow label="HEX" value={value} />
+              <CopyRow label="CSS Class" value={className} />
+            </div>
+          </div>
+        </article>
+      );
+    };
+
+    const ColorList = ({ family, tokens }) => (
+      <section className="mt-12 first:mt-0">
+        <div className="mb-4 flex items-baseline gap-3">
+          <h2 className="m-0 text-lg font-semibold tracking-tight text-black">
+            {formatFamilyName(family)}
+          </h2>
+
+          <span className="text-xs text-gray-400">
+            {tokens.length} colors
+          </span>
+        </div>
+
+        <Unstyled>
+          <div className="mt-3 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {tokens.map(({ tokenName, value }) => (
+              <ColorCard key={tokenName} tokenName={tokenName} value={value} />
+            ))}
+          </div>
+        </Unstyled>
+      </section>
+    );
+
+    const colorGroups = [...groups.entries()].map(([family, tokens]) => ({
+      family,
+      tokens: [...tokens].sort((a, b) => a.scale - b.scale),
+    }));
+
+    return (
+      <div className="mt-10">
+        {colorGroups.map(({ family, tokens }) => (
+          <ColorList key={family} family={family} tokens={tokens} />
+        ))}
+
+        {standalone.length > 0 && (
+          <section className="mt-12">
+            <div className="mb-4">
+              <div className="flex items-baseline gap-3">
+                <h2 className="m-0 text-lg font-semibold tracking-tight text-black">
+                  Standalone & Semantic
+                </h2>
+
+                <span className="text-xs text-gray-400">
+                  {standalone.length} colors
+                </span>
+              </div>
+
+              <p className="mt-1 max-w-2xl text-sm leading-6 text-gray-500">
+                Colors without a numeric scale, including standalone primitives and semantic tokens.
+              </p>
+            </div>
+
+            <Unstyled>
+              <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+                {standalone.map(({ tokenName, value }) => (
+                  <ColorCard key={tokenName} tokenName={tokenName} value={value} />
+                ))}
+              </div>
+            </Unstyled>
+          </section>
+        )}
+      </div>
+    );
+
+})()
+}

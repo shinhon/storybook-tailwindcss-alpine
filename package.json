@@ -1,0 +1,29 @@
+{
+  "name": "storybook-tailwindcss-alpine",
+  "private": true,
+  "version": "0.0.0",
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "tokens:build": "style-dictionary build --config style-dictionary.config.js",
+    "tokens:clean": "style-dictionary clean --config style-dictionary.config.js",
+    "prestorybook": "pnpm tokens:build",
+    "storybook": "storybook dev -p 6006",
+    "prebuild-storybook": "pnpm tokens:build",
+    "build-storybook": "storybook build"
+  },
+  "devDependencies": {
+    "@storybook/addon-docs": "^10.6.0",
+    "@storybook/html-vite": "^10.6.0",
+    "@tailwindcss/vite": "^4.3.3",
+    "@types/alpinejs": "^3.13.11",
+    "storybook": "^10.6.0",
+    "style-dictionary": "^5.5.2",
+    "tailwindcss": "^4.3.3",
+    "typescript": "~6.0.2",
+    "vite": "^8.2.2"
+  },
+  "dependencies": {
+    "alpinejs": "^3.17.1"
+  }
+}
