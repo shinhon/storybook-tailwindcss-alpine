@@ -17,6 +17,24 @@ const portableThemeMarker = "/* __TAILWIND_THEME__ */";
 
 const isColor = (token) => (token.$type ?? token.type) === "color";
 
+function replaceIndentedMarker(template, marker, content) {
+  const markerLine = template
+    .split(/\r?\n/)
+    .find((line) => line.trim() === marker);
+
+  if (!markerLine) {
+    throw new Error(`Portable HTML template is missing ${marker}`);
+  }
+
+  const indentation = markerLine.slice(0, markerLine.indexOf(marker));
+  const indentedContent = content
+    .split("\n")
+    .map((line) => (line ? `${indentation}${line}` : line))
+    .join("\n");
+
+  return template.replace(markerLine, indentedContent);
+}
+
 function formatTailwindTheme({ dictionary, options }) {
   const variables = formattedVariables({
     format: propertyFormatNames.css,
@@ -69,13 +87,11 @@ ${theme}
           options,
         });
 
-        if (!portableHtmlTemplate.includes(portableThemeMarker)) {
-          throw new Error(
-            `Portable HTML template is missing ${portableThemeMarker}`,
-          );
-        }
-
-        return portableHtmlTemplate.replace(portableThemeMarker, theme);
+        return replaceIndentedMarker(
+          portableHtmlTemplate,
+          portableThemeMarker,
+          theme,
+        );
       },
     },
   },

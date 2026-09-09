@@ -1,4 +1,4 @@
-import { Meta, Source } from "@storybook/addon-docs/blocks";
+import { Meta, Source, Unstyled } from "@storybook/addon-docs/blocks";
 
 import portableHtml from "../generated/portable-html.html?raw";
 
@@ -10,4 +10,26 @@ A standalone HTML template for quick prototyping
 with the project's Design Tokens, Tailwind CSS,
 and Alpine.js.
 
-<Source code={portableHtml} language="html" />
+<Unstyled>
+  <details className="group mt-6 overflow-hidden rounded-lg border border-gray-200 bg-white">
+    <summary className="flex cursor-pointer list-none items-center justify-between gap-4 px-4 py-3 text-sm font-medium text-black transition hover:bg-gray-50 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black [&::-webkit-details-marker]:hidden">
+      <span>View source (copy it locally and start testing your components)</span>
+
+      <svg
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="2"
+        className="size-4 shrink-0 text-gray-500 transition-transform group-open:rotate-180"
+        aria-hidden="true"
+      >
+        <path d="m6 9 6 6 6-6" />
+      </svg>
+    </summary>
+
+    <div className="border-t border-gray-200 px-4">
+      <Source code={portableHtml} language="html" />
+    </div>
+
+  </details>
+</Unstyled>

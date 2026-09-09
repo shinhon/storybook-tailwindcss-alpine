@@ -6,7 +6,7 @@ The project explores a workflow in which component code stays lightweight and po
 
 ## Current Scope
 
-The token-generation workflow currently support colors only.
+The token-generation workflow currently supports colors only.
 
 DTCG-compatible color tokens are processed with Style Dictionary to generate:
 
