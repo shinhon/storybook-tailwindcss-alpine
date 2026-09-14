@@ -1,9 +1,528 @@
-{
-  "color-blue-600": "#2563eb",
-  "color-blue-700": "#1d4ed8",
-  "color-slate-50": "#f8fafc",
-  "color-slate-200": "#e2e8f0",
-  "color-slate-700": "#334155",
-  "color-slate-950": "#020617",
-  "color-white": "#ffffff"
-}
+[
+  {
+    "tokenName": "color-black",
+    "path": [
+      "color",
+      "black"
+    ],
+    "value": "#000000",
+    "primitiveVariable": null
+  },
+  {
+    "tokenName": "color-white",
+    "path": [
+      "color",
+      "white"
+    ],
+    "value": "#ffffff",
+    "primitiveVariable": null
+  },
+  {
+    "tokenName": "color-gray-50",
+    "path": [
+      "color",
+      "gray",
+      "50"
+    ],
+    "value": "#f9fafb",
+    "primitiveVariable": null
+  },
+  {
+    "tokenName": "color-gray-100",
+    "path": [
+      "color",
+      "gray",
+      "100"
+    ],
+    "value": "#f3f4f6",
+    "primitiveVariable": null
+  },
+  {
+    "tokenName": "color-gray-200",
+    "path": [
+      "color",
+      "gray",
+      "200"
+    ],
+    "value": "#e5e7eb",
+    "primitiveVariable": null
+  },
+  {
+    "tokenName": "color-gray-300",
+    "path": [
+      "color",
+      "gray",
+      "300"
+    ],
+    "value": "#d1d5db",
+    "primitiveVariable": null
+  },
+  {
+    "tokenName": "color-gray-400",
+    "path": [
+      "color",
+      "gray",
+      "400"
+    ],
+    "value": "#9ca3af",
+    "primitiveVariable": null
+  },
+  {
+    "tokenName": "color-gray-500",
+    "path": [
+      "color",
+      "gray",
+      "500"
+    ],
+    "value": "#6b7280",
+    "primitiveVariable": null
+  },
+  {
+    "tokenName": "color-gray-600",
+    "path": [
+      "color",
+      "gray",
+      "600"
+    ],
+    "value": "#4b5563",
+    "primitiveVariable": null
+  },
+  {
+    "tokenName": "color-gray-700",
+    "path": [
+      "color",
+      "gray",
+      "700"
+    ],
+    "value": "#374151",
+    "primitiveVariable": null
+  },
+  {
+    "tokenName": "color-gray-800",
+    "path": [
+      "color",
+      "gray",
+      "800"
+    ],
+    "value": "#1f2937",
+    "primitiveVariable": null
+  },
+  {
+    "tokenName": "color-gray-900",
+    "path": [
+      "color",
+      "gray",
+      "900"
+    ],
+    "value": "#111827",
+    "primitiveVariable": null
+  },
+  {
+    "tokenName": "color-gray-950",
+    "path": [
+      "color",
+      "gray",
+      "950"
+    ],
+    "value": "#030712",
+    "primitiveVariable": null
+  },
+  {
+    "tokenName": "color-blue-50",
+    "path": [
+      "color",
+      "blue",
+      "50"
+    ],
+    "value": "#eff6ff",
+    "primitiveVariable": null
+  },
+  {
+    "tokenName": "color-blue-100",
+    "path": [
+      "color",
+      "blue",
+      "100"
+    ],
+    "value": "#dbeafe",
+    "primitiveVariable": null
+  },
+  {
+    "tokenName": "color-blue-200",
+    "path": [
+      "color",
+      "blue",
+      "200"
+    ],
+    "value": "#bfdbfe",
+    "primitiveVariable": null
+  },
+  {
+    "tokenName": "color-blue-300",
+    "path": [
+      "color",
+      "blue",
+      "300"
+    ],
+    "value": "#93c5fd",
+    "primitiveVariable": null
+  },
+  {
+    "tokenName": "color-blue-400",
+    "path": [
+      "color",
+      "blue",
+      "400"
+    ],
+    "value": "#60a5fa",
+    "primitiveVariable": null
+  },
+  {
+    "tokenName": "color-blue-500",
+    "path": [
+      "color",
+      "blue",
+      "500"
+    ],
+    "value": "#3b82f6",
+    "primitiveVariable": null
+  },
+  {
+    "tokenName": "color-blue-600",
+    "path": [
+      "color",
+      "blue",
+      "600"
+    ],
+    "value": "#2563eb",
+    "primitiveVariable": null
+  },
+  {
+    "tokenName": "color-blue-700",
+    "path": [
+      "color",
+      "blue",
+      "700"
+    ],
+    "value": "#1d4ed8",
+    "primitiveVariable": null
+  },
+  {
+    "tokenName": "color-blue-800",
+    "path": [
+      "color",
+      "blue",
+      "800"
+    ],
+    "value": "#1e40af",
+    "primitiveVariable": null
+  },
+  {
+    "tokenName": "color-blue-900",
+    "path": [
+      "color",
+      "blue",
+      "900"
+    ],
+    "value": "#1e3a8a",
+    "primitiveVariable": null
+  },
+  {
+    "tokenName": "color-blue-950",
+    "path": [
+      "color",
+      "blue",
+      "950"
+    ],
+    "value": "#172554",
+    "primitiveVariable": null
+  },
+  {
+    "tokenName": "color-emerald-50",
+    "path": [
+      "color",
+      "emerald",
+      "50"
+    ],
+    "value": "#ecfdf5",
+    "primitiveVariable": null
+  },
+  {
+    "tokenName": "color-emerald-100",
+    "path": [
+      "color",
+      "emerald",
+      "100"
+    ],
+    "value": "#d1fae5",
+    "primitiveVariable": null
+  },
+  {
+    "tokenName": "color-emerald-200",
+    "path": [
+      "color",
+      "emerald",
+      "200"
+    ],
+    "value": "#a7f3d0",
+    "primitiveVariable": null
+  },
+  {
+    "tokenName": "color-emerald-300",
+    "path": [
+      "color",
+      "emerald",
+      "300"
+    ],
+    "value": "#6ee7b7",
+    "primitiveVariable": null
+  },
+  {
+    "tokenName": "color-emerald-400",
+    "path": [
+      "color",
+      "emerald",
+      "400"
+    ],
+    "value": "#34d399",
+    "primitiveVariable": null
+  },
+  {
+    "tokenName": "color-emerald-500",
+    "path": [
+      "color",
+      "emerald",
+      "500"
+    ],
+    "value": "#10b981",
+    "primitiveVariable": null
+  },
+  {
+    "tokenName": "color-emerald-600",
+    "path": [
+      "color",
+      "emerald",
+      "600"
+    ],
+    "value": "#059669",
+    "primitiveVariable": null
+  },
+  {
+    "tokenName": "color-emerald-700",
+    "path": [
+      "color",
+      "emerald",
+      "700"
+    ],
+    "value": "#047857",
+    "primitiveVariable": null
+  },
+  {
+    "tokenName": "color-emerald-800",
+    "path": [
+      "color",
+      "emerald",
+      "800"
+    ],
+    "value": "#065f46",
+    "primitiveVariable": null
+  },
+  {
+    "tokenName": "color-emerald-900",
+    "path": [
+      "color",
+      "emerald",
+      "900"
+    ],
+    "value": "#064e3b",
+    "primitiveVariable": null
+  },
+  {
+    "tokenName": "color-emerald-950",
+    "path": [
+      "color",
+      "emerald",
+      "950"
+    ],
+    "value": "#022c22",
+    "primitiveVariable": null
+  },
+  {
+    "tokenName": "color-secondary",
+    "path": [
+      "color",
+      "secondary"
+    ],
+    "value": "#059669",
+    "primitiveVariable": "var(--color-emerald-600)"
+  },
+  {
+    "tokenName": "color-primary-surface",
+    "path": [
+      "color",
+      "primary",
+      "surface"
+    ],
+    "value": "#eff6ff",
+    "primitiveVariable": "var(--color-blue-50)"
+  },
+  {
+    "tokenName": "color-primary-on-surface",
+    "path": [
+      "color",
+      "primary",
+      "onSurface"
+    ],
+    "value": "#059669",
+    "primitiveVariable": "var(--color-emerald-600)"
+  },
+  {
+    "tokenName": "color-primary-border",
+    "path": [
+      "color",
+      "primary",
+      "border"
+    ],
+    "value": "#93c5fd",
+    "primitiveVariable": "var(--color-blue-300)"
+  },
+  {
+    "tokenName": "color-btn-primary-surface",
+    "path": [
+      "color",
+      "btn",
+      "primary",
+      "surface"
+    ],
+    "value": "#93c5fd",
+    "primitiveVariable": "var(--color-blue-300)"
+  },
+  {
+    "tokenName": "color-btn-primary-hover",
+    "path": [
+      "color",
+      "btn",
+      "primary",
+      "hover"
+    ],
+    "value": "#eff6ff",
+    "primitiveVariable": "var(--color-blue-50)"
+  },
+  {
+    "tokenName": "color-btn-primary-on-surface",
+    "path": [
+      "color",
+      "btn",
+      "primary",
+      "onSurface"
+    ],
+    "value": "#059669",
+    "primitiveVariable": "var(--color-emerald-600)"
+  },
+  {
+    "tokenName": "color-btn-secondary-surface",
+    "path": [
+      "color",
+      "btn",
+      "secondary",
+      "surface"
+    ],
+    "value": "#eff6ff",
+    "primitiveVariable": "var(--color-blue-50)"
+  },
+  {
+    "tokenName": "color-btn-secondary-border",
+    "path": [
+      "color",
+      "btn",
+      "secondary",
+      "border"
+    ],
+    "value": "#93c5fd",
+    "primitiveVariable": "var(--color-blue-300)"
+  },
+  {
+    "tokenName": "color-btn-secondary-on-surface",
+    "path": [
+      "color",
+      "btn",
+      "secondary",
+      "onSurface"
+    ],
+    "value": "#059669",
+    "primitiveVariable": "var(--color-emerald-600)"
+  },
+  {
+    "tokenName": "color-card-surface",
+    "path": [
+      "color",
+      "card",
+      "surface"
+    ],
+    "value": "#eff6ff",
+    "primitiveVariable": "var(--color-blue-50)"
+  },
+  {
+    "tokenName": "color-card-border",
+    "path": [
+      "color",
+      "card",
+      "border"
+    ],
+    "value": "#93c5fd",
+    "primitiveVariable": "var(--color-blue-300)"
+  },
+  {
+    "tokenName": "color-navigation-active",
+    "path": [
+      "color",
+      "navigation",
+      "active"
+    ],
+    "value": "#059669",
+    "primitiveVariable": "var(--color-emerald-600)"
+  },
+  {
+    "tokenName": "color-navigation-hover",
+    "path": [
+      "color",
+      "navigation",
+      "hover"
+    ],
+    "value": "#eff6ff",
+    "primitiveVariable": "var(--color-blue-50)"
+  },
+  {
+    "tokenName": "color-status-info-surface",
+    "path": [
+      "color",
+      "status",
+      "info",
+      "surface"
+    ],
+    "value": "#eff6ff",
+    "primitiveVariable": "var(--color-blue-50)"
+  },
+  {
+    "tokenName": "color-status-info-border",
+    "path": [
+      "color",
+      "status",
+      "info",
+      "border"
+    ],
+    "value": "#93c5fd",
+    "primitiveVariable": "var(--color-blue-300)"
+  },
+  {
+    "tokenName": "color-status-success-icon",
+    "path": [
+      "color",
+      "status",
+      "success",
+      "icon"
+    ],
+    "value": "#059669",
+    "primitiveVariable": "var(--color-emerald-600)"
+  }
+]

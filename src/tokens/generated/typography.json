@@ -1,0 +1,340 @@
+[
+  {
+    "tokenName": "text-xs",
+    "path": [
+      "font",
+      "size",
+      "xs"
+    ],
+    "category": "size",
+    "label": "xs",
+    "value": 12,
+    "cssValue": "0.75rem",
+    "cssVariable": "--text-xs"
+  },
+  {
+    "tokenName": "text-sm",
+    "path": [
+      "font",
+      "size",
+      "sm"
+    ],
+    "category": "size",
+    "label": "sm",
+    "value": 14,
+    "cssValue": "0.875rem",
+    "cssVariable": "--text-sm"
+  },
+  {
+    "tokenName": "text-base",
+    "path": [
+      "font",
+      "size",
+      "base"
+    ],
+    "category": "size",
+    "label": "base",
+    "value": 16,
+    "cssValue": "1rem",
+    "cssVariable": "--text-base"
+  },
+  {
+    "tokenName": "text-lg",
+    "path": [
+      "font",
+      "size",
+      "lg"
+    ],
+    "category": "size",
+    "label": "lg",
+    "value": 18,
+    "cssValue": "1.125rem",
+    "cssVariable": "--text-lg"
+  },
+  {
+    "tokenName": "text-xl",
+    "path": [
+      "font",
+      "size",
+      "xl"
+    ],
+    "category": "size",
+    "label": "xl",
+    "value": 20,
+    "cssValue": "1.25rem",
+    "cssVariable": "--text-xl"
+  },
+  {
+    "tokenName": "text-2xl",
+    "path": [
+      "font",
+      "size",
+      "2xl"
+    ],
+    "category": "size",
+    "label": "2xl",
+    "value": 24,
+    "cssValue": "1.5rem",
+    "cssVariable": "--text-2xl"
+  },
+  {
+    "tokenName": "text-3xl",
+    "path": [
+      "font",
+      "size",
+      "3xl"
+    ],
+    "category": "size",
+    "label": "3xl",
+    "value": 30,
+    "cssValue": "1.875rem",
+    "cssVariable": "--text-3xl"
+  },
+  {
+    "tokenName": "text-4xl",
+    "path": [
+      "font",
+      "size",
+      "4xl"
+    ],
+    "category": "size",
+    "label": "4xl",
+    "value": 36,
+    "cssValue": "2.25rem",
+    "cssVariable": "--text-4xl"
+  },
+  {
+    "tokenName": "text-5xl",
+    "path": [
+      "font",
+      "size",
+      "5xl"
+    ],
+    "category": "size",
+    "label": "5xl",
+    "value": 48,
+    "cssValue": "3rem",
+    "cssVariable": "--text-5xl"
+  },
+  {
+    "tokenName": "text-6xl",
+    "path": [
+      "font",
+      "size",
+      "6xl"
+    ],
+    "category": "size",
+    "label": "6xl",
+    "value": 60,
+    "cssValue": "3.75rem",
+    "cssVariable": "--text-6xl"
+  },
+  {
+    "tokenName": "text-7xl",
+    "path": [
+      "font",
+      "size",
+      "7xl"
+    ],
+    "category": "size",
+    "label": "7xl",
+    "value": 72,
+    "cssValue": "4.5rem",
+    "cssVariable": "--text-7xl"
+  },
+  {
+    "tokenName": "text-8xl",
+    "path": [
+      "font",
+      "size",
+      "8xl"
+    ],
+    "category": "size",
+    "label": "8xl",
+    "value": 96,
+    "cssValue": "6rem",
+    "cssVariable": "--text-8xl"
+  },
+  {
+    "tokenName": "text-9xl",
+    "path": [
+      "font",
+      "size",
+      "9xl"
+    ],
+    "category": "size",
+    "label": "9xl",
+    "value": 128,
+    "cssValue": "8rem",
+    "cssVariable": "--text-9xl"
+  },
+  {
+    "tokenName": "font-sans",
+    "path": [
+      "font",
+      "family",
+      "sans"
+    ],
+    "category": "family",
+    "label": "sans",
+    "value": "Noto Sans JP",
+    "cssValue": "\"Noto Sans JP\"",
+    "cssVariable": "--font-sans"
+  },
+  {
+    "tokenName": "font-serif",
+    "path": [
+      "font",
+      "family",
+      "serif"
+    ],
+    "category": "family",
+    "label": "serif",
+    "value": "Georgia",
+    "cssValue": "\"Georgia\"",
+    "cssVariable": "--font-serif"
+  },
+  {
+    "tokenName": "font-mono",
+    "path": [
+      "font",
+      "family",
+      "mono"
+    ],
+    "category": "family",
+    "label": "mono",
+    "value": "Menlo",
+    "cssValue": "\"Menlo\"",
+    "cssVariable": "--font-mono"
+  },
+  {
+    "tokenName": "leading-3",
+    "path": [
+      "font",
+      "leading",
+      "3"
+    ],
+    "category": "leading",
+    "label": "3",
+    "value": 12,
+    "cssValue": "0.75rem",
+    "cssVariable": "--leading-3"
+  },
+  {
+    "tokenName": "leading-4",
+    "path": [
+      "font",
+      "leading",
+      "4"
+    ],
+    "category": "leading",
+    "label": "4",
+    "value": 16,
+    "cssValue": "1rem",
+    "cssVariable": "--leading-4"
+  },
+  {
+    "tokenName": "leading-5",
+    "path": [
+      "font",
+      "leading",
+      "5"
+    ],
+    "category": "leading",
+    "label": "5",
+    "value": 20,
+    "cssValue": "1.25rem",
+    "cssVariable": "--leading-5"
+  },
+  {
+    "tokenName": "leading-6",
+    "path": [
+      "font",
+      "leading",
+      "6"
+    ],
+    "category": "leading",
+    "label": "6",
+    "value": 24,
+    "cssValue": "1.5rem",
+    "cssVariable": "--leading-6"
+  },
+  {
+    "tokenName": "leading-7",
+    "path": [
+      "font",
+      "leading",
+      "7"
+    ],
+    "category": "leading",
+    "label": "7",
+    "value": 28,
+    "cssValue": "1.75rem",
+    "cssVariable": "--leading-7"
+  },
+  {
+    "tokenName": "leading-8",
+    "path": [
+      "font",
+      "leading",
+      "8"
+    ],
+    "category": "leading",
+    "label": "8",
+    "value": 32,
+    "cssValue": "2rem",
+    "cssVariable": "--leading-8"
+  },
+  {
+    "tokenName": "leading-9",
+    "path": [
+      "font",
+      "leading",
+      "9"
+    ],
+    "category": "leading",
+    "label": "9",
+    "value": 36,
+    "cssValue": "2.25rem",
+    "cssVariable": "--leading-9"
+  },
+  {
+    "tokenName": "leading-10",
+    "path": [
+      "font",
+      "leading",
+      "10"
+    ],
+    "category": "leading",
+    "label": "10",
+    "value": 40,
+    "cssValue": "2.5rem",
+    "cssVariable": "--leading-10"
+  },
+  {
+    "tokenName": "leading-full",
+    "path": [
+      "font",
+      "leading",
+      "full"
+    ],
+    "category": "leading",
+    "label": "full",
+    "value": "100%",
+    "cssValue": "100%",
+    "cssVariable": "--leading-full"
+  },
+  {
+    "tokenName": "leading-xs",
+    "path": [
+      "font",
+      "leading",
+      "xs"
+    ],
+    "category": "leading",
+    "label": "xs",
+    "value": 12,
+    "cssValue": "0.75rem",
+    "cssVariable": "--leading-xs"
+  }
+]

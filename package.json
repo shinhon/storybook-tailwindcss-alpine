@@ -18,6 +18,8 @@
     "@storybook/html-vite": "^10.6.0",
     "@tailwindcss/vite": "^4.3.3",
     "@types/alpinejs": "^3.13.11",
+    "@types/react": "19.2.18",
+    "react": "19.2.8",
     "storybook": "^10.6.0",
     "style-dictionary": "^5.5.2",
     "tailwindcss": "^4.3.3",

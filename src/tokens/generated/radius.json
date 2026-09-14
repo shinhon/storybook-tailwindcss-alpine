@@ -1,0 +1,112 @@
+[
+  {
+    "tokenName": "radius-md",
+    "path": [
+      "radius",
+      "md"
+    ],
+    "label": "md",
+    "value": 6,
+    "cssValue": "6px",
+    "cssVariable": "--radius-md"
+  },
+  {
+    "tokenName": "radius-lg",
+    "path": [
+      "radius",
+      "lg"
+    ],
+    "label": "lg",
+    "value": 8,
+    "cssValue": "8px",
+    "cssVariable": "--radius-lg"
+  },
+  {
+    "tokenName": "radius-none",
+    "path": [
+      "radius",
+      "none"
+    ],
+    "label": "none",
+    "value": 0,
+    "cssValue": "0px",
+    "cssVariable": "--radius-none"
+  },
+  {
+    "tokenName": "radius-xs",
+    "path": [
+      "radius",
+      "xs"
+    ],
+    "label": "xs",
+    "value": 2,
+    "cssValue": "2px",
+    "cssVariable": "--radius-xs"
+  },
+  {
+    "tokenName": "radius-sm",
+    "path": [
+      "radius",
+      "sm"
+    ],
+    "label": "sm",
+    "value": 4,
+    "cssValue": "4px",
+    "cssVariable": "--radius-sm"
+  },
+  {
+    "tokenName": "radius-xl",
+    "path": [
+      "radius",
+      "xl"
+    ],
+    "label": "xl",
+    "value": 12,
+    "cssValue": "12px",
+    "cssVariable": "--radius-xl"
+  },
+  {
+    "tokenName": "radius-2xl",
+    "path": [
+      "radius",
+      "2xl"
+    ],
+    "label": "2xl",
+    "value": 16,
+    "cssValue": "16px",
+    "cssVariable": "--radius-2xl"
+  },
+  {
+    "tokenName": "radius-3xl",
+    "path": [
+      "radius",
+      "3xl"
+    ],
+    "label": "3xl",
+    "value": 24,
+    "cssValue": "24px",
+    "cssVariable": "--radius-3xl"
+  },
+  {
+    "tokenName": "radius-4xl",
+    "path": [
+      "radius",
+      "4xl"
+    ],
+    "label": "4xl",
+    "value": 32,
+    "cssValue": "32px",
+    "cssVariable": "--radius-4xl"
+  },
+  {
+    "tokenName": "radius-full",
+    "path": [
+      "radius",
+      "full"
+    ],
+    "label": "full",
+    "value": 9999,
+    "cssValue": "9999px",
+    "cssVariable": "--radius-full"
+  }
+]
