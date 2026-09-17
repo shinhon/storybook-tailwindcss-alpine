@@ -1,27 +1,5 @@
 [
   {
-    "tokenName": "radius-md",
-    "path": [
-      "radius",
-      "md"
-    ],
-    "label": "md",
-    "value": 6,
-    "cssValue": "6px",
-    "cssVariable": "--radius-md"
-  },
-  {
-    "tokenName": "radius-lg",
-    "path": [
-      "radius",
-      "lg"
-    ],
-    "label": "lg",
-    "value": 8,
-    "cssValue": "8px",
-    "cssVariable": "--radius-lg"
-  },
-  {
     "tokenName": "radius-none",
     "path": [
       "radius",
@@ -53,6 +31,28 @@
     "value": 4,
     "cssValue": "4px",
     "cssVariable": "--radius-sm"
+  },
+  {
+    "tokenName": "radius-md",
+    "path": [
+      "radius",
+      "md"
+    ],
+    "label": "md",
+    "value": 6,
+    "cssValue": "6px",
+    "cssVariable": "--radius-md"
+  },
+  {
+    "tokenName": "radius-lg",
+    "path": [
+      "radius",
+      "lg"
+    ],
+    "label": "lg",
+    "value": 8,
+    "cssValue": "8px",
+    "cssVariable": "--radius-lg"
   },
   {
     "tokenName": "radius-xl",

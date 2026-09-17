@@ -3,6 +3,10 @@ import type { Preview } from "@storybook/html-vite";
 import "../src/styles/global.css";
 
 import { initAlpine } from "../src/alpine";
+import { registerAlpineComponents } from "../src/alpine-components";
+import { docsTheme } from "./docs-theme";
+
+registerAlpineComponents();
 initAlpine();
 
 const preview: Preview = {
@@ -16,6 +20,7 @@ const preview: Preview = {
     },
     docs: {
       codePanel: true,
+      theme: docsTheme,
     },
     options: {
       storySort: {

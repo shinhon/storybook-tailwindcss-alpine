@@ -1,0 +1,31 @@
+import { Canvas, Controls, Meta, Source } from "@storybook/addon-docs/blocks";
+
+import * as SelectStories from "./select.stories";
+import selectBehavior from "./select.ts?raw";
+
+<Meta of={SelectStories} name="Overview" />
+
+# Select
+
+Selects allow users to choose one option from a list.
+
+## Playground
+
+<Canvas of={SelectStories.Playground} withToolbar />
+
+<Controls of={SelectStories.Playground} />
+
+## Portable source
+
+Select is a behavioral component. Its custom renderer produces the portable
+Alpine HTML, while `select.ts` provides the Alpine behavior and provider that
+manage its interaction state.
+
+Register the provider before calling `Alpine.start()` when adapting these
+sources for a standalone HTML environment.
+
+### Behavior
+
+`select.ts`
+
+<Source code={selectBehavior} language="ts" />

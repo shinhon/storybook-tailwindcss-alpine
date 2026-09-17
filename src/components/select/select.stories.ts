@@ -1,17 +1,23 @@
 import type { Meta, StoryObj } from "@storybook/html-vite";
 
-import { renderSwitch, type SwitchArgs } from "./switch.render";
+import { renderSelect, type SelectArgs } from "./select.render";
 
 const meta = {
-  title: "Components/Switch",
+  title: "Components/Select",
 
   args: {
-    enabled: false,
+    size: "md",
+    error: false,
     disabled: false,
   },
 
   argTypes: {
-    enabled: {
+    size: {
+      control: "radio",
+      options: ["sm", "md", "lg"],
+    },
+
+    error: {
       control: "boolean",
     },
 
@@ -20,12 +26,12 @@ const meta = {
     },
   },
 
-  render: (args) => renderSwitch(args),
+  render: (args) => renderSelect(args),
 
   parameters: {
     layout: "centered",
   },
-} satisfies Meta<SwitchArgs>;
+} satisfies Meta<SelectArgs>;
 
 export default meta;
 

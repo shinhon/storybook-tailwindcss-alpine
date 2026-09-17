@@ -1,22 +1,84 @@
 # Storybook + Tailwind CSS + Alpine.js
 
-An experimental, HTML-first Storybook setup for designers and engineers to build and discuss UI designs and interactions—with help from AI tools.
+An HTML-first UI workspace built with Storybook, Tailwind CSS, and Alpine.js.
 
-The project explores a workflow in which component code stays lightweight and portable, so design decisions can be inspected, modified, and discussed without being tied to an application's business logic.
+Components are rendered as complete Alpine-enabled HTML strings, documented in Storybook, and styled with generated Tailwind CSS design tokens.
 
-## Current Scope
+## Features
 
-The token-generation workflow currently supports colors only.
+- Storybook documentation for color, typography, and radius tokens
+- Tailwind CSS v4 theme generation with Style Dictionary
+- HTML-first Switch and Select components
+- Storybook Controls for component configuration
+- Alpine.js behavior for component interactions
+- Automatic Storybook source output from the rendered HTML
+- An Example Card pattern composed from the existing Select and Switch renderers
+- A generated Portable HTML playground that uses the same design tokens
 
-DTCG-compatible color tokens are processed with Style Dictionary to generate:
+## Component Architecture
 
-- Tailwind CSS v4 theme variables
-- structured color data for Storybook documentation
-- a standalone Portable HTML environment that uses the same generated color theme
+Each component exposes a small TypeScript renderer. The renderer accepts its configuration and returns the final Alpine HTML used by Storybook Canvas.
 
-Support for generating code and MDX documentation for other token types is planned.
+```text
+Storybook args
+      │
+      ▼
+component renderer
+      │
+      ▼
+final Alpine HTML
+      │
+      ▼
+Storybook Canvas
+```
 
-The project also contains lightweight HTML + Alpine.js component examples for experimenting with interactions inside Storybook.
+Stories call the renderer directly:
+
+```ts
+render: (args) => renderSwitch(args);
+```
+
+Renderers use readable HTML template literals and only handle markup, initial configuration, and composition.
+
+### Inline Alpine state
+
+Simple components can serialize their initial state directly into `x-data`. Switch uses this approach:
+
+```html
+<div x-data='{"enabled":false,"disabled":false}'>
+  <!-- Switch markup -->
+</div>
+```
+
+### Alpine providers
+
+Components with more interaction logic keep that behavior in an Alpine provider. Select renders its initial configuration into the provider call:
+
+```html
+<div x-data='select({"size":"sm","error":false,"disabled":false})'>
+  <!-- Select markup -->
+</div>
+```
+
+The Select behavior remains in `select.ts`. Providers are registered centrally before Alpine starts, so renderers do not register providers or manage the Alpine runtime.
+
+### Pattern composition
+
+Patterns compose existing renderers instead of copying component markup. Example Card is assembled from the current Select and Switch implementations:
+
+```ts
+export function renderExampleCard() {
+  return `
+    <section>
+      <!-- Pattern content -->
+      ${renderSelect({ size: "sm" })}
+      ${renderSwitch()}
+    </section>
+  `;
+}
+```
+
+The pattern owns only its semantic content, container, and layout. Component state and behavior remain with the component renderers and Alpine providers.
 
 ## Tech Stack
 
@@ -63,22 +125,24 @@ http://localhost:6006
 
 Design tokens are automatically regenerated before Storybook starts.
 
-## Color Token Workflow
+## Design Token Workflow
 
 Source tokens are stored as DTCG-compatible JSON data and processed with Style Dictionary.
 
 ```text
-DTCG-compatible color tokens
+DTCG-compatible tokens
             │
             ▼
      Style Dictionary
             │
             ├──► Tailwind CSS v4 theme
             │
-            ├──► Storybook color data
+            ├──► Storybook documentation data
             │
             └──► Portable HTML
 ```
+
+The current Storybook foundations document colors, typography, and radius values.
 
 Generated files should not be edited manually.
 
@@ -96,25 +160,13 @@ pnpm tokens:clean
 
 ## Portable HTML
 
-The project generates a standalone HTML file that includes the generated color theme and loads Tailwind CSS and Alpine.js from a CDN.
+The project generates a standalone HTML file that includes the generated theme and loads Tailwind CSS and Alpine.js from a CDN.
 
 This provides a lightweight playground where component markup can be copied and modified without installing dependencies or understanding the entire Storybook project.
 
-For example, a designer can copy a component's HTML, open the Portable HTML file locally, and experiment directly with Tailwind utilities and Alpine.js interactions, either manually or with the help of an AI coding tool.
+Component HTML can be copied into the Portable HTML file and modified directly with Tailwind utilities and Alpine.js interactions.
 
-The Portable HTML environment is generated from the same token source used by Storybook, which helps keep experiments aligned with the documented color palette.
-
-## Alpine.js and Storybook Controls
-
-Components remain close to plain HTML and use Alpine.js for interactions.
-
-A small Storybook helper maps Storybook `args` to the component root's `x-data`, allowing Storybook Controls to manipulate Alpine component state without requiring a separate implementation for the story.
-
-```ts
-render: (args) => renderAlpine(componentHtml, args);
-```
-
-The goal is to keep the component markup readable on its own and portable while still making it interactive inside Storybook.
+The Portable HTML environment is generated from the same token source used by Storybook, which keeps standalone examples aligned with the documented foundations.
 
 ## Build
 
@@ -125,12 +177,6 @@ pnpm build-storybook
 ```
 
 Token generation runs automatically before Storybook is built.
-
-## Project Status
-
-This project is experimental and under active development.
-
-The initial token-generation workflow intentionally focuses on colors. Additional design-token and documentation workflows may be explored in future releases.
 
 ## License
 

@@ -97,11 +97,11 @@
   --leading-xs: 0.75rem;
 
   /* Radius */
-  --radius-md: 6px;
-  --radius-lg: 8px;
   --radius-none: 0px;
   --radius-xs: 2px;
   --radius-sm: 4px;
+  --radius-md: 6px;
+  --radius-lg: 8px;
   --radius-xl: 12px;
   --radius-2xl: 16px;
   --radius-3xl: 24px;
